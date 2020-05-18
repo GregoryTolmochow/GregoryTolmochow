@@ -15,3 +15,5 @@ def gameintro():
     print('Before you are thrown into a world you will never escape from alive')
     time.sleep(2)
     c = input('Now choose your social class: 1. Lower class, however you are nice and thoughtful, 2. middle class but you cursed with jelously, 3. rich and stressed aka your hair is gray at 20 (input the number of your option): ')
+
+   
