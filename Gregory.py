@@ -6,26 +6,35 @@ import random
 import time
 import math
 
-x = input('Enter you name: ') #Intro information on data being used about player
-print()
-time.sleep(3)
-print('Now be careful this next input will determine how long you are able to survive in the game.')
-print()
-time.sleep(2)
-y = int(input('Enter your age: '))
-print()
-time.sleep(4)
-print('Well good luck ' + x + ', stay on top of your toes and you might just do all right.')
-time.sleep(2)
-print('Initiating game')
-time.sleep(2)
-print()
-time.sleep(2)   #print and sleep statements added for suspense, make game flow smoothly while player can enjoyably read through each sentence
-print()
-time.sleep(2)
-print()
-time.sleep(2)
-print()
+def name():
+    global x
+    x = input('Enter you name: ') #Intro information on data being used about player
+    print()
+    time.sleep(3)
+    print('Now be careful this next input will determine how long you are able to survive in the game.')
+    print()
+    time.sleep(2)
+    global y
+    y = int(input('Enter your age: '))
+    print()
+    time.sleep(4)
+    print('Well good luck ' + x + ', stay on top of your toes and you might just do all right.')
+    time.sleep(2)
+    print('Initiating game')
+    time.sleep(2)
+    print()
+    time.sleep(2)   #print and sleep statements added for suspense, make game flow smoothly while player can enjoyably read through each sentence
+    print()
+    time.sleep(2)
+    print()
+    time.sleep(2)
+    print()
+    return (x and y)
+
+def check0():
+    name()
+    print(x)
+    print(y)
 
 def gameintro(): #gameintro lets you decide your path, starts you off with age, kills off people who choose first option
     print ('Welcome ' + x + ' to my game, NextGen!')
@@ -428,8 +437,9 @@ def checkage3(): #end of game summary, most likely above 100 which is death mark
         print('Goodbye')
 
 
-playAgain = "yes" #Once you get to the end of game summary you are then asked if you want to play again which will run all the functions through again keeping your original age and name
+playAgain = "yes" #Once you get to the end of game summary you are then asked if you want to play again which will run all the functions through again 
 while playAgain == "yes" or playAgain == "y": 
+    name()
     gameintro()
     billy()
     checkage()
