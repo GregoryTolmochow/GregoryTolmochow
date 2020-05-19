@@ -1,3 +1,7 @@
+#Gregory Tolmochow
+#Computer Science Final Project 
+#May 19, 2020
+
 import random
 import time
 import math
@@ -401,3 +405,30 @@ def choosepath(path): #takes in input from last function to give different optio
 def check4(): #enables global
     choosepath()
     print(finalage) 
+
+def checkage3(): #end of game summary, most likely above 100 which is death marker
+    if int(finalage) > 100:
+        diff = int(finalage - 100)
+        print('Sorry, but you barley made it.')
+        time.sleep(2)
+        print('You went '+ str(diff)+ ' years above your lifespan.')
+        time.sleep(3)
+        print('It was very fun wasting your precious time, ironically by playing this game it actually is taking time away from your lifespan.')
+        time.sleep(4)
+        print('So in truth, I awlays win!')
+        time.sleep(2)
+        print('Goodbye')
+        time.sleep(3)
+
+
+playAgain = "yes" #Once you get to the end of game summary you are then asked if you want to play again which will run all the functions through again keeping your original age and name
+while playAgain == "yes" or playAgain == "y": 
+    gameintro()
+    billy()
+    checkage()
+    precan()
+    checkage6()
+    choice = cointoss() 
+    choosepath(choice)
+    checkage3()
+    playAgain = input("If you would like to attempt to find an alternate outcome. ignroing the fact that your future is destined, then please yes or y to continue: ")
