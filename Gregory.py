@@ -101,3 +101,73 @@ def gameintro(): #gameintro lets you decide your path, starts you off with age, 
 
     return(newage)
 
+def check(): #allows me to store global variable
+    gameintro()
+    print(newage)
+    print(c)
+
+print()
+
+def billy(): #new setting in which player is given more options to choose different situations that alter age
+    time.sleep(8)
+    print()
+    time.sleep(7)
+    print('Meet your bestfriend Billy')
+    time.sleep(3)
+    print()
+    print('He knows the ins and outs of these parts and will help guide you to makeing the best life possible for yourself.')
+    time.sleep(3)
+    print('You and Billy are taking a stroll through the streets and')
+    time.sleep(3)
+    print('BOOM!')
+    time.sleep(3)
+    print()
+    print('WACK!')
+    time.sleep(2)
+    print()
+    print('Billy is jumped by the local gang, it is your time to prove yourself!')
+    time.sleep(3)
+    print('Are you going to risk your life and fight back or let him potentially die, therefore losing your connections throughout the city')
+    fight = input('fight or watch: ')
+    if fight == 'fight':
+        time.sleep(4)
+        print('Well here you go...')
+        time.sleep(2)
+        print('BANG!')
+        print()
+        time.sleep(2)
+        print('BONG!')
+        print()
+        time.sleep(3)
+        print('You saved Billy and you only got a black eye, you are rewarded 10 years of extra life.')
+        global newage2
+        newage2 = int(newage - 10)
+        time.sleep(3)
+        print()
+        print('You are now ' + str(newage2) + ' years old.')
+    else:
+        time.sleep(3)
+        print('Billy dies. You are then beat up by the gang and suffer from PTSD.')
+        time.sleep(3)
+        print('Because of the trauma 30 years is added to your life.')
+        newage2 = int(newage + 30)
+        time.sleep(3)
+        print()
+        print('You are now ' + str(newage2) + 'years old.')
+    
+    return(newage2)
+
+print()
+
+def check2(): #global variable usage
+    billy()
+    print(newage2)
+
+print()
+
+def checkage(): #if age is below 0 you have effectively become too young because you chose too small of an age, game will not make sense with negative age
+    if int(newage2) < 0: 
+        print('Sorry but you have died, you have chosen too many correct answers and therefore the game has ended.')
+        print('You can either take this as a personal win or just accept that you should not be playing this game and instead should be studying for the SAT.')
+        print('Goodbye')
+        exit()
