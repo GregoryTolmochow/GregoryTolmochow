@@ -419,6 +419,13 @@ def checkage3(): #end of game summary, most likely above 100 which is death mark
         time.sleep(2)
         print('Goodbye')
         time.sleep(3)
+    else: 
+        print("Well you got lucky with your age")
+        time.sleep(3)
+        print("I am exhausted, so all I can give is a simple congratualtions!")
+        print()
+        time.sleep(3)
+        print('Goodbye')
 
 
 playAgain = "yes" #Once you get to the end of game summary you are then asked if you want to play again which will run all the functions through again keeping your original age and name
